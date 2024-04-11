@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    env_file:
+      - ./.env
+    build: ./backend
+    image: backend
+    environment:
+      - BACKEND_IP=$BACKEND_PRIVATE_IP
+    ports:
+      - $BACKEND_LOCAL_PORT:$BACKEND_DOCKER_PORT
+    networks:
+      - frontend_backend_network
+
+networks:
+  frontend_backend_network:
+    driver: bridge
