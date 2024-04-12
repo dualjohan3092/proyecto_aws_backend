@@ -15,6 +15,9 @@ RUN npm install
 # Instalar cors
 RUN npm install cors
 
+# Actualiza los repositorios e instala net-tools
+RUN apt-get update && apt-get install -y net-tools
+
 # Copiar el resto de los archivos
 COPY . .
 
