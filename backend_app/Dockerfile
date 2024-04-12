@@ -16,13 +16,14 @@ RUN npm install
 RUN npm install cors
 
 # Actualiza los repositorios e instala net-tools
-RUN apt-get update && apt-get install -y net-tools
+RUN apt-get update && apt-get install -y net-tools curl
 
 # Copiar el resto de los archivos
 COPY . .
 
 # Definir la variable de entorno con la dirección IP privada
 ENV BACKEND_IP=10.1.91.179
+
 # Puerto que escucha el servidor
 EXPOSE 3000
 
