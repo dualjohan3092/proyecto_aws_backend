@@ -3,7 +3,7 @@ services:
   backend:
     env_file:
       - ./.env
-    build: ./backend
+    build: ./backend_app
     image: backend
     environment:
       - BACKEND_IP=$BACKEND_PRIVATE_IP
