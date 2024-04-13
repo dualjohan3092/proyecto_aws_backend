@@ -24,6 +24,9 @@ COPY . .
 # Definir la variable de entorno con la dirección IP privada
 ENV BACKEND_IP=10.1.91.179
 
+# Definir la variable de entorno PORT
+ENV PORT=3000
+
 # Puerto que escucha el servidor
 EXPOSE 3000
 
