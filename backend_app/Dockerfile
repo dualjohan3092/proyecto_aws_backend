@@ -25,7 +25,11 @@ COPY . .
 ENV BACKEND_IP=10.1.91.179
 
 # Definir la variable de entorno PORT
-ENV PORT=3000
+ENV BACKEND_LOCAL_PORT=3000
+ENV BACKEND_DOCKER_PORT=3000
+
+# Puerto que escucha el servidor
+EXPOSE ${BACKEND_DOCKER_PORT}
 
 # Puerto que escucha el servidor
 EXPOSE 3000

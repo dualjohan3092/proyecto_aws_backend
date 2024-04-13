@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.BACKEND_DOCKER_PORT;
+const port = process.env.BACKEND_DOCKER_PORT || 3000;
 app.use(cors());
 
 app.get('/api', (req, res) => {
