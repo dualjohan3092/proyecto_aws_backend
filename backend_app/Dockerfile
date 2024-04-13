@@ -32,7 +32,7 @@ ENV BACKEND_DOCKER_PORT=3000
 EXPOSE ${BACKEND_DOCKER_PORT}
 
 # Puerto que escucha el servidor
-EXPOSE 3000
+# EXPOSE 3000
 
 # Comando para iniciar la aplicación
 CMD ["node", "index.js"]
