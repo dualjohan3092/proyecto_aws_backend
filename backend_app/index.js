@@ -7,7 +7,7 @@ const backendIP = process.env.BACKEND_IP || 'localhost';
 
 app.use(cors());
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send('¡Hola Mundo desde el backend!');
 });
 
